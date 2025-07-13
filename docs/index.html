@@ -3,14 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <title>Malla Curricular - Arquitectura</title>
-  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      padding: 2em;
+      text-align: center;
+      color: #004b6b;
+    }
+    h1 {
+      margin-bottom: 1.5em;
+    }
+    .malla {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+    }
+    .curso {
+      padding: 1em 2em;
+      font-size: 1em;
+      background-color: #cfefff;
+      border: 2px solid #87ceeb;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .curso:hover {
+      background-color: #b3e0ff;
+    }
+    .curso.completado {
+      background-color: #a0d6b4;
+      text-decoration: line-through;
+      border-color: #4caf50;
+    }
+    .curso.bloqueado {
+      background-color: #e0e0e0;
+      color: #999;
+      cursor: not-allowed;
+      border-color: #ccc;
+    }
+    .detalle {
+      display: none;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 400px;
+      background-color: #ffffff;
+      border: 1px solid #b0d4ff;
+      border-radius: 10px;
+      padding: 1em;
+      color: #003c59;
+    }
+    .detalle ul {
+      list-style-type: square;
+      padding-left: 1.5em;
+    }
+  </style>
 </head>
 <body>
   <h1>Malla Curricular - Arquitectura y Urbanismo Ambiental</h1>
 
   <div class="malla">
     <button class="curso" data-index="0" onclick="toggleCurso(this)">Ciclo 1</button>
-    <div class="detalle" data-index="0" style="display: none;">
+    <div class="detalle" data-index="0">
       <ul>
         <li>Introducción a la Arquitectura y Urbanismo Ambiental – 4 cr</li>
         <li>Diseño Básico – 4 cr</li>
@@ -22,7 +77,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="1" onclick="toggleCurso(this)">Ciclo 2</button>
-    <div class="detalle" data-index="1" style="display: none;">
+    <div class="detalle" data-index="1">
       <ul>
         <li>Taller de Investigación y Diseño I – 4 cr</li>
         <li>Medios de Expresión I – 3 cr</li>
@@ -35,7 +90,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="2" onclick="toggleCurso(this)">Ciclo 3</button>
-    <div class="detalle" data-index="2" style="display: none;">
+    <div class="detalle" data-index="2">
       <ul>
         <li>Taller de Investigación y Diseño II – 4 cr</li>
         <li>Medios de Expresión II – 3 cr</li>
@@ -47,7 +102,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="3" onclick="toggleCurso(this)">Ciclo 4</button>
-    <div class="detalle" data-index="3" style="display: none;">
+    <div class="detalle" data-index="3">
       <ul>
         <li>Taller de Investigación y Diseño III – 4 cr</li>
         <li>Building Information Modeling – 3 cr</li>
@@ -60,7 +115,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="4" onclick="toggleCurso(this)">Ciclo 5</button>
-    <div class="detalle" data-index="4" style="display: none;">
+    <div class="detalle" data-index="4">
       <ul>
         <li>Taller de Investigación y Diseño IV – 4 cr</li>
         <li>Historia de la Arquitectura III – 3 cr</li>
@@ -72,7 +127,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="5" onclick="toggleCurso(this)">Ciclo 6</button>
-    <div class="detalle" data-index="5" style="display: none;">
+    <div class="detalle" data-index="5">
       <ul>
         <li>Taller de Investigación y Diseño V – 4 cr</li>
         <li>Estructuras III – 3 cr</li>
@@ -84,7 +139,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="6" onclick="toggleCurso(this)">Ciclo 7</button>
-    <div class="detalle" data-index="6" style="display: none;">
+    <div class="detalle" data-index="6">
       <ul>
         <li>Taller de Investigación y Diseño VI – 4 cr</li>
         <li>Estructuras IV – 3 cr</li>
@@ -96,7 +151,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="7" onclick="toggleCurso(this)">Ciclo 8</button>
-    <div class="detalle" data-index="7" style="display: none;">
+    <div class="detalle" data-index="7">
       <ul>
         <li>Taller de Investigación y Diseño VII – 4 cr</li>
         <li>Seminario de Tesis I – 2 cr</li>
@@ -108,7 +163,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="8" onclick="toggleCurso(this)">Ciclo 9</button>
-    <div class="detalle" data-index="8" style="display: none;">
+    <div class="detalle" data-index="8">
       <ul>
         <li>Taller de Investigación y Diseño VIII – 4 cr</li>
         <li>Seminario de Tesis II – 2 cr</li>
@@ -119,7 +174,7 @@
     </div>
 
     <button class="curso bloqueado" data-index="9" onclick="toggleCurso(this)">Ciclo 10</button>
-    <div class="detalle" data-index="9" style="display: none;">
+    <div class="detalle" data-index="9">
       <ul>
         <li>Trabajo de Investigación – 4 cr</li>
         <li>Ética y Deontología Profesional – 2 cr</li>
@@ -129,7 +184,60 @@
       </ul>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cursos = document.querySelectorAll(".curso");
 
-  <script src="script.js"></script>
+      cursos.forEach((curso, index) => {
+        const estado = localStorage.getItem(`curso_${index}`);
+        const detalle = document.querySelector(`.detalle[data-index='${index}']`);
+
+        if (estado === "completado") {
+          curso.classList.add("completado");
+          desbloquear(index + 1);
+          if (detalle) detalle.style.display = "block";
+        }
+      });
+    });
+
+    function toggleCurso(boton) {
+      if (boton.classList.contains("bloqueado")) return;
+
+      const index = parseInt(boton.getAttribute("data-index"));
+      const detalle = document.querySelector(`.detalle[data-index='${index}']`);
+
+      if (boton.classList.contains("completado")) {
+        boton.classList.remove("completado");
+        localStorage.removeItem(`curso_${index}`);
+        bloquearDesde(index + 1);
+        if (detalle) detalle.style.display = "none";
+      } else {
+        boton.classList.add("completado");
+        localStorage.setItem(`curso_${index}`, "completado");
+        desbloquear(index + 1);
+        if (detalle) detalle.style.display = "block";
+      }
+    }
+
+    function desbloquear(index) {
+      const siguiente = document.querySelector(`.curso[data-index='${index}']`);
+      if (siguiente) siguiente.classList.remove("bloqueado");
+    }
+
+    function bloquearDesde(index) {
+      for (let i = index; i < 10; i++) {
+        const curso = document.querySelector(`.curso[data-index='${i}']`);
+        const detalle = document.querySelector(`.detalle[data-index='${i}']`);
+        if (curso) {
+          curso.classList.remove("completado");
+          curso.classList.add("bloqueado");
+          localStorage.removeItem(`curso_${i}`);
+        }
+        if (detalle) {
+          detalle.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
