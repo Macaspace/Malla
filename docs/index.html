@@ -1,24 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Malla Curricular - Arquitectura</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <title>Malla Curricular - Arquitectura</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Malla Curricular - Arquitectura y Urbanismo Ambiental</h1>
-    <div class="malla">
-        <button class="curso" data-index="0" onclick="toggleCurso(this)">Ciclo 1</button>
-        <button class="curso bloqueado" data-index="1" onclick="toggleCurso(this)">Ciclo 2</button>
-        <button class="curso bloqueado" data-index="2" onclick="toggleCurso(this)">Ciclo 3</button>
-        <button class="curso bloqueado" data-index="3" onclick="toggleCurso(this)">Ciclo 4</button>
-        <button class="curso bloqueado" data-index="4" onclick="toggleCurso(this)">Ciclo 5</button>
-        <button class="curso bloqueado" data-index="5" onclick="toggleCurso(this)">Ciclo 6</button>
-        <button class="curso bloqueado" data-index="6" onclick="toggleCurso(this)">Ciclo 7</button>
-        <button class="curso bloqueado" data-index="7" onclick="toggleCurso(this)">Ciclo 8</button>
-        <button class="curso bloqueado" data-index="8" onclick="toggleCurso(this)">Ciclo 9</button>
-        <button class="curso bloqueado" data-index="9" onclick="toggleCurso(this)">Ciclo 10</button>
+  <h1>Malla Curricular - Arquitectura y Urbanismo Ambiental</h1>
+
+  <div class="malla">
+    <button class="curso" data-index="0" onclick="toggleCurso(this)">Ciclo 1</button>
+    <div class="detalle" data-index="0" style="display: none;">
+      <ul>
+        <li>Introducción a la Arquitectura y Urbanismo Ambiental – 4 cr</li>
+        <li>Diseño Básico – 4 cr</li>
+        <li>Dibujo Arquitectónico – 3 cr</li>
+        <li>Lengua y Comunicación – 4 cr</li>
+        <li>Lógica – 3 cr</li>
+        <li>Desempeño Universitario – 3 cr</li>
+      </ul>
     </div>
-    <script src="script.js"></script>
+
+    <button class="curso bloqueado" data-index="1" onclick="toggleCurso(this)">Ciclo 2</button>
+    <div class="detalle" data-index="1" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño I – 4 cr</li>
+        <li>Medios de Expresión I – 3 cr</li>
+        <li>Geometría Descriptiva y del Espacio – 3 cr</li>
+        <li>Matemática General – 4 cr</li>
+        <li>Realidad Nacional – 3 cr</li>
+        <li>Educación Ambiental – 3 cr</li>
+        <li>Inglés – 2 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="2" onclick="toggleCurso(this)">Ciclo 3</button>
+    <div class="detalle" data-index="2" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño II – 4 cr</li>
+        <li>Medios de Expresión II – 3 cr</li>
+        <li>Historia de la Arquitectura I – 3 cr</li>
+        <li>Topografía – 3 cr</li>
+        <li>Bioarquitectura I – 3 cr</li>
+        <li>Física – 3 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="3" onclick="toggleCurso(this)">Ciclo 4</button>
+    <div class="detalle" data-index="3" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño III – 4 cr</li>
+        <li>Building Information Modeling – 3 cr</li>
+        <li>Historia de la Arquitectura II – 3 cr</li>
+        <li>Estructuras I – 3 cr</li>
+        <li>Bioarquitectura II – 3 cr</li>
+        <li>Tópicos de Formación General – 2 cr</li>
+        <li>Introducción a la Investigación – 3 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="4" onclick="toggleCurso(this)">Ciclo 5</button>
+    <div class="detalle" data-index="4" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño IV – 4 cr</li>
+        <li>Historia de la Arquitectura III – 3 cr</li>
+        <li>Estructuras II – 3 cr</li>
+        <li>Materiales y Técnicas Constructivas – 3 cr</li>
+        <li>Estadística General – 3 cr</li>
+        <li>Electivo – 2 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="5" onclick="toggleCurso(this)">Ciclo 6</button>
+    <div class="detalle" data-index="5" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño V – 4 cr</li>
+        <li>Estructuras III – 3 cr</li>
+        <li>Sistemas Constructivos Convencionales – 3 cr</li>
+        <li>Fundamentos de Diseño Urbano – 3 cr</li>
+        <li>Redes Sanitarias – 3 cr</li>
+        <li>Electivo – 2 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="6" onclick="toggleCurso(this)">Ciclo 7</button>
+    <div class="detalle" data-index="6" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño VI – 4 cr</li>
+        <li>Estructuras IV – 3 cr</li>
+        <li>Sistemas Constructivos No Convencionales – 3 cr</li>
+        <li>Proyecto Urbano Contemporáneo – 3 cr</li>
+        <li>Redes Eléctricas y Mecánicas – 3 cr</li>
+        <li>Electivo – 2 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="7" onclick="toggleCurso(this)">Ciclo 8</button>
+    <div class="detalle" data-index="7" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño VII – 4 cr</li>
+        <li>Seminario de Tesis I – 2 cr</li>
+        <li>Project Management – 3 cr</li>
+        <li>Urbanismo y Territorio – 3 cr</li>
+        <li>Cartografía y SIG – 3 cr</li>
+        <li>Electivo – 2 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="8" onclick="toggleCurso(this)">Ciclo 9</button>
+    <div class="detalle" data-index="8" style="display: none;">
+      <ul>
+        <li>Taller de Investigación y Diseño VIII – 4 cr</li>
+        <li>Seminario de Tesis II – 2 cr</li>
+        <li>Energías Renovables – 3 cr</li>
+        <li>Workshop Sustainable Cities – 3 cr</li>
+        <li>Electivo – 2 cr</li>
+      </ul>
+    </div>
+
+    <button class="curso bloqueado" data-index="9" onclick="toggleCurso(this)">Ciclo 10</button>
+    <div class="detalle" data-index="9" style="display: none;">
+      <ul>
+        <li>Trabajo de Investigación – 4 cr</li>
+        <li>Ética y Deontología Profesional – 2 cr</li>
+        <li>Formulación y Evaluación de Proyectos Ambientales – 3 cr</li>
+        <li>Smart Buildings – 3 cr</li>
+        <li>Electivo – 2 cr</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
