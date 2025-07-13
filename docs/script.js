@@ -51,3 +51,4 @@ function bloquearDesde(index) {
         }
     }
 }
+<script src="script.js"></script>
